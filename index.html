@@ -352,7 +352,11 @@
   ];
 
   // ====== Инициализация карты ======
-  const map = L.map('map', { zoomControl:true }).setView([42.874, 74.605], 13);
+  var map = L.map('map', {
+  center: [42.8746, 74.5698],
+  zoom: 12,
+  attributionControl: false
+});
 
   // Подложка: CartoDB Positron — чистая светлая карта (похожая по чистоте на 2ГИС)
   L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
